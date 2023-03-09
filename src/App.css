@@ -8,6 +8,13 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
+.Nav{ 
+  display:block;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(233, 221, 221);
+
+}
 .App {
 }
 .Navbar {

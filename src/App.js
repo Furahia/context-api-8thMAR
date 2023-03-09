@@ -9,6 +9,8 @@ import ProductsDisplay from "./components/ProductsDisplay";
 import { products } from "./data";
 import { ProductsProvider } from "./context"
 
+
+
 function App() {
   const [categories, setCategories] = useState([]);
   useEffect(() => {
@@ -17,16 +19,18 @@ function App() {
     const categoriesArr = Array.from(new Set(categories));
     setCategories(categoriesArr);
   }, [products]);
+  console.log(categories)
   return (
     <div className="App">
       <Navbar />
+      <Home/>
 
       <ProductsProvider>
         <Routes>
-          <Route path={"/products"} element={<Products products={products} />}>
+          <Route path={"/products"} element={<Products />}>
             <Route
               index
-              element={<ProductsDisplay products={products} category={"all"} />}
+              element={<ProductsDisplay category={"all"} />}
             />
             {categories.length > 0 &&
               categories.map((c) => {
@@ -42,7 +46,7 @@ function App() {
           </Route>
           <Route
             path="/products/:id"
-            element={<OneProduct products={products} />}
+            element={<OneProduct />}
           />
         </Routes>
       </ProductsProvider>
