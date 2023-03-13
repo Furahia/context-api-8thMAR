@@ -1,19 +1,18 @@
+
 import React from 'react'
-import Navbar from './Navbar'
 
-function Home() {
-  return(
-      <div className="Nav">
-          <ul>
+ import Home from './Home.jpg'
+import { Link } from 'react-router-dom'
 
-<li>  CART</li>    
-<li> CATEGORIES</li>
-<li>  ACCOUNT</li>
-<li> HELP</li>
-</ul>
-  </div>
-  )
-  
-}
+const Welcome = () => {
+  return (
+    <section className="welcome-section">
+      <h1>Welcome to our online store!</h1>
+      <p>We offer a wide range of products</p>
+      
+    </section>
 
-export default Home
+
+  );
+};
+export default Welcome

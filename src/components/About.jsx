@@ -5,7 +5,7 @@ function About() {
     let {theme, setTheme} = useContext(ThemeContext)
   return (
     <div className={theme}>
-      <h2>This is the about component </h2>
+      <h2>This is the component </h2>
       <button
         onClick={() =>
           setTheme((prev) => (prev === "light" ? "dark" : "light"))
